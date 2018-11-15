@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Presentation second part</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="txt">
+            <h1>Presentation JS - second part</h1>
+
+        </div>
+    </header>
+    <div class="page-content">
+        <div id="section-one">
+            <h2 class="sub-title">Variables</h2>
+            <p class="para-txt"> Variables are used so that we do not write the same value more than once, and that we can monitor which object
+                is being done even when its value changes.</p>
+
+
+            <p class="para-txt">
+                We can be immediately given the value when we create them, and we can also create them with the value added later, but we
+                also have more individual variables</p>
+
+            <p class="para-txt">There are global and local variables. Global variables are available throughout the program, while local variables
+                are defined within the function and will not be available outside the function.</p>
+
+            <div class="col-md-6 example1">
+                <h3 class="sub-subtitle">Global variables</h3>
+                <div id="global">
+                    <p id="global-example"></p>
+                    <p class="para-txt">
+                        var dates = new Date();
+                        <br> var hours = dates.getHours();
+                        <br> if (hours &gt;= 5 && hours
+                        &lt;10) { document.getElementById( "global-example").innerHTML="Good morning" ; } <br>
+                            else if (hours
+                            &lt; 19 && hours&gt; 9) { document.getElementById("global-example").innerHTML = "Good afternoon"; }
+                                <br> else { document.getElementById("global-example").innerHTML = "Good evening"; }
+                    </p>
+
+                </div>
+
+            </div>
+            <div class="col-md-6 example2">
+                <h3 class="sub-subtitle loc">Local variables</h3>
+                <div id="local">
+                    <div id="local-example">
+                        <button id="result">Click for result</button>
+                    </div>
+                    <p class="para-txt">
+                        document.getElementById("result").addEventListener("click", function()
+                        <br>{ &nbsp; &nbsp; var a = 100;
+                        <br> &nbsp; &nbsp; var b = 50;
+                        <br> &nbsp; &nbsp; alert(a - b) ;
+                        <br> });
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="section-two">
+
+            <h2 class="sub-title json-title">JSON</h2>
+            <p class="para-txt json-txt">
+                JSON is a format that quite resembles javascript objects, javascript objects can be converted to JSON and we can convert
+                them back from JSON to the object.</p>
+            <div class="col-md-6 example1">
+                <h3 class="sub-subtitle json-subtitle">Example of Javascript Object</h3>
+                <p class="para-txt json-txt ">
+                    var testTypeData={
+                    <br> a:7,
+                    <br> b:true,
+                    <br> c:{a:"b"},
+                    <br> d:"String",
+                    <br> e:[1,2,3]
+                    <br> };
+                </p>
+
+            </div>
+            <div class="col-md-6 example2">
+                <h3 class="sub-subtitle json-subtitle">Example of JS converted to JSON:</h3>
+
+                <p class="para-txt json-txt ">
+                    {
+                    <br> "a": 7,
+                    <br> "b": true,
+                    <br> "c": {
+                    <br> "a": "b"
+                    <br> },
+                    <br> "d": "String",
+                    <br> "e": [ 1, 2, 3 ]
+                    <br> }
+                </p>
+
+            </div>
+            <div class="col-lg-12 container-fluid">
+                <p class="para-txt">
+                    The difference between the JSON and the Javascript object is that in JSON we have key quotes.</p>
+                <p class="para-txt ">
+
+                    var jsonString3 = JSON.stringify(testTipovaPodataka); &nbsp;
+                    <span class="span-clr"> // converting from string to JSON</span>
+                    <br> console.log("u json:", jsonString3); console.log('iz jsona:', JSON.parse(jsonString3)); &nbsp;
+                    <span class="span-clr">// converting from JSON to string</span>
+                </p>
+            </div>
+        </div>
+        <div id="section-three">
+            <div>
+                <div class="section-three-txt">
+                    <h2 class="sub-title third-title">Math object's</h2>
+                    <p class="para-txt math-txt">Math is a built-in object that has properties and methods for mathematical constants and functions. Not
+                        a function object. Unlike the other global objects, Math is not a constructor.
+                        <br> All properties and methods of Math are static. You refer to the constant pi as Math.PI and you call
+                        the sine function as Math.sin(x), where x is the method's argument.
+                        <br>Constants are defined with the full precision of real numbers in JavaScript.
+                    </p>
+                </div>
+
+                <div class="col-md-6 section-three-list">
+                    <h3 class="math-subtitle">Math methods</h3>
+                    <ul class="list">
+                        <li><strong>Math.abs();</strong> // Absolute value (returns a positive number regardless of whether it was sent positive
+                            or negative)</li>
+                        <li><strong>Math.round();</strong> // rounding up the numbers</li>
+                        <li><strong>Math.pow();</strong> // step numbering</li>
+                        <li><strong>Math.sqrt();</strong> // square root of the number</li>
+                        <li><strong>Math.ceil();</strong> // Round the number up</li>
+                        <li><strong>Math.floor();</strong> // Round the number down</li>
+                        <li><strong>Math.min();</strong>// From the forwarded numbers, the one returned is the smallest</li>
+                        <li><strong>Math.max();</strong> // From the forwarded numbers, returns the one that is the largest</li>
+                        <li><strong>Math.random();</strong> // Random number from 0 to 1</li>
+                        <li><strong>Math.PI;</strong> // Returns the PI number</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 section-three-table">
+                    <h3 class="math-subtitle">Math example</h3>
+                    <table class="section-table">
+                        <tr class="row">
+                            <td>
+                                <strong>Math.PI</strong>
+
+                                <br> function volumeCircle(r) {
+                                <br> return 2 * r * Math.PI; } volumeCircle();
+                            </td>
+                            <td>
+                                <strong> Math.random </strong>
+                                <br> function getRandom() {
+                                    <br>
+                                   
+                                    return Math.random();
+                                    <br>
+                                  }
+                                </td>
+                            <td><strong>Math.round</strong> <br> 
+                                console.log(Math.round(-5.05), Math.round(-5.5), Math.round(-5.95));</td>
+                        </tr>
+                        <tr class="row">
+
+                            <td>
+                                <strong> Math.abs</strong>
+                                <br> function subtraction(a, b) { return Math.abs(a - b); } console.log(subtraction(2, 6))</td>
+                            <td>
+                                <strong> Math.sqrt</strong>
+                                <br> function calcHypotenuse(a, b) { return(Math.sqrt((a * a) + (b * b))); } console.log(calcHypotenuse(3,
+                                4));</td>
+                            <td><strong> Math.floor</strong> <br>
+                                Math.floor( 45.95); //  45
+                                <br>
+                                    Math.floor( 45.05); //  45
+                                    <br>
+                                    Math.floor(-45.05); // -46 </td>
+                                    
+                        </tr>
+                        <tr class="row">
+                            <td>
+                                <strong> Math.pow</strong>
+                                <br> console.log(Math.pow(5, 3));</td>
+                            <td>
+                                <strong>Math.ceil</strong>
+                                <br> console.log(Math.ceil(6.4));
+
+                            </td>
+                            <td><strong> Math.min</strong>
+                                <br>
+                                console.log(Math.min(2, 3, 1))</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var dates = new Date();
+        var hours = dates.getHours();
+        if (hours >= 5 && hours < 10) {
+            document.getElementById("global-example").innerHTML = "Good morning";
+
+        }
+        else if (hours < 19 && hours > 9) {
+            document.getElementById("global-example").innerHTML = "Good afternoon";
+
+        }
+        else {
+            document.getElementById("global-example").innerHTML = "Good evening";
+
+        }
+        document.getElementById("result").addEventListener("click", function () {
+            var a = 100;
+            var b = 50;
+
+            alert(a - b);
+        });
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
